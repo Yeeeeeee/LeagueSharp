@@ -2,3 +2,4 @@ C:\Users\Emin\Documents\Visual Studio 2013\Projects\Renekton\Renekton\bin\Debug\
 C:\Users\Emin\Documents\Visual Studio 2013\Projects\LeagueSharp\Renekton\Renekton\bin\Debug\Renekton.exe.config
 C:\Users\Emin\Documents\Visual Studio 2013\Projects\LeagueSharp\Renekton\Renekton\obj\Debug\Renekton.csprojResolveAssemblyReference.cache
 C:\Users\Emin\LeagueSharp\master\Renekton\Renekton\bin\Debug\Renekton.exe.config
+C:\Users\Emin\Desktop\HB\GitHub\LeagueSharp\Renekton\bin\Debug\Renekton.exe.config

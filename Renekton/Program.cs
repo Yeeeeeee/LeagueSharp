@@ -29,7 +29,9 @@ class Program
     static void Main(string[] args)
     {
       
-        CustomEvents.Game.OnGameLoad += Game_OnGameLoad;
+        CustomEvents.Game.OnGameLoad += Game_OnGameLoad;//Subscribe to Events
+        Orbwalking.AfterAttack += Orbwalking_OnAfterAttack;
+        Obj_AI_Base.OnProcessSpellCast += Obj_AI_Hero_OnProcessSpellCast;
     }
 
     private static void Game_OnGameLoad(EventArgs args)
@@ -245,7 +247,7 @@ class Program
         }
     }
 
-    private static void OrbwalkingOnAfterAttack(AttackableUnit unit, AttackableUnit target)//[Trigger Warning: Trigger] Triggered after every attack
+    private static void Orbwalking_OnAfterAttack(AttackableUnit unit, AttackableUnit target)//[Trigger Warning: Trigger] Triggered after every attack
     {
         if (!unit.IsValid || !unit.IsMe)//We only want to register our attacks, throw out the rest
         {
