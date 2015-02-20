@@ -29,7 +29,6 @@ class Program
     static void Main(string[] args)
     {
       
-        CustomEvents.Game.OnGameLoad += Game_OnGameLoad;//Subscribe to Events
         Orbwalking.AfterAttack += Orbwalking_OnAfterAttack;
         Obj_AI_Base.OnProcessSpellCast += Obj_AI_Hero_OnProcessSpellCast;
     }
@@ -85,6 +84,8 @@ class Program
         Drawing.OnDraw += Drawing_OnDraw;
 
         Game.OnGameUpdate += Game_OnGameUpdate;
+        Orbwalking.AfterAttack += Orbwalking_OnAfterAttack;
+        Obj_AI_Base.OnProcessSpellCast += Obj_AI_Hero_OnProcessSpellCast;
 
         Notifications.AddNotification(new Notification("Renekton by OuO Loaded", 3000));//Adds startup Notification (Notifications By L33T <3)
     }
