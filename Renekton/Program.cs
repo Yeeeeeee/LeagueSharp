@@ -288,6 +288,7 @@ class Program
     {
         if (sender == Player && args.SData.Name == "RenektonSliceAndDice")//If it's us, and we used Slice, start our expiration watch
         {
+            Game.PrintChat("Used e1");
             stopwatch.Start();
         }
         if (sender == Player && args.SData.Name == "renektondice")//If it's us, and we used Dice, stop our expiration watch
