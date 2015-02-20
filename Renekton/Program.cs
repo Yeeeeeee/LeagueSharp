@@ -30,6 +30,7 @@ class Program
     {
 
         CustomEvents.Game.OnGameLoad += Game_OnGameLoad;
+        Game.OnGameUpdate += Game_OnGameUpdate;
         Orbwalking.AfterAttack += Orbwalking_OnAfterAttack;
         Obj_AI_Base.OnProcessSpellCast += Obj_AI_Hero_OnProcessSpellCast;
     }
@@ -83,10 +84,6 @@ class Program
         Menu.AddToMainMenu();//Adds entire Menu to Shift call
 
         Drawing.OnDraw += Drawing_OnDraw;
-
-        Game.OnGameUpdate += Game_OnGameUpdate;
-        Orbwalking.AfterAttack += Orbwalking_OnAfterAttack;
-        Obj_AI_Base.OnProcessSpellCast += Obj_AI_Hero_OnProcessSpellCast;
 
         Notifications.AddNotification(new Notification("Renekton by OuO Loaded", 3000));//Adds startup Notification (Notifications By L33T <3)
     }
@@ -288,7 +285,7 @@ class Program
 
     private static void Obj_AI_Hero_OnProcessSpellCast(Obj_AI_Base sender, GameObjectProcessSpellCastEventArgs args)//[Trigger Warning: Trigger] Triggered after every spell
     {
-        if (sender == Player && args.SData.Name == "RenektonSliceAndDice")//If it's us, and we used Slice, start our expiration watch
+        if (!sender.IsEnemy && args.SData.Name == "RenektonSliceAndDice")//If it's us, and we used Slice, start our expiration watch
         {
             Game.PrintChat("Used e1");
             stopwatch.Start();
