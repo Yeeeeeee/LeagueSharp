@@ -29,7 +29,7 @@ class Program
     static void Main(string[] args)
     {
 
-        Game.OnGameStart += Game_OnGameLoad;
+        CustomEvents.Game.OnGameStart += Game_OnGameLoad;
         Orbwalking.AfterAttack += Orbwalking_OnAfterAttack;
         Obj_AI_Base.OnProcessSpellCast += Obj_AI_Hero_OnProcessSpellCast;
     }
